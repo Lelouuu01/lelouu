@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perpustakaan Sekolah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <style>
+      body {
+        background-color: #fefefe;
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      .jumbotron {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: white;
+        padding: 5rem 1rem;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      .jumbotron h1 {
+        font-weight: 700;
+      }
+      .section-title {
+        margin-bottom: 2rem;
+        font-weight: 600;
+        text-align: center;
+        color: #007bff;
+      }
+      .btn-primary {
+        background-color: #4facfe;
+        border: none;
+        transition: all 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: #007bff;
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+        border-radius: 10px 10px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Perpustakaan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#layanan">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#koleksi">Koleksi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <section id="home" class="jumbotron">
+      <h1 class="display-4">Selamat Datang</h1>
+      <p class="lead">Di Perpustakaan Sekolah Kami</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="text-center">Perpustakaan sekolah kami menyediakan berbagai koleksi buku untuk mendukung pembelajaran siswa.</p>
+      </div>
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Layanan</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Pendaftaran Anggota</h3>
+            <form id="registrationForm">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama" name="nama" required />
+              </div>
+              <div class="mb-3">
+                <label for="kelas" class="form-label">Kelas</label>
+                <input type="text" class="form-control" id="kelas" name="kelas" required />
+              </div>
+              <div class="mb-3">
+                <label for="nis" class="form-label">Nomor Induk Siswa (NIS)</label>
+                <input type="text" class="form-control" id="nis" name="nis" required />
+              </div>
+              <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat</label>
+                <input type="text" class="form-control" id="alamat" name="alamat" required />
+              </div>
+              <div class="mb-3">
+                <label for="telepon" class="form-label">Nomor Telepon</label>
+                <input type="text" class="form-control" id="telepon" name="telepon" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Daftar</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h3>Informasi Layanan</h3>
+            <p>Perpustakaan menyediakan berbagai layanan untuk mendukung kebutuhan informasi siswa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Koleksi Section -->
+    <section id="koleksi" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Koleksi Buku</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/buku1.jpg" class="card-img-top" alt="Buku 1" />
+              <div class="card-body">
+                <h5 class="card-title">Buku Pelajaran Matematika</h5>
+                <p class="card-text">Koleksi buku untuk membantu pembelajaran Matematika di tingkat sekolah.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/buku2.jpg" class="card-img-top" alt="Buku 2" />
+              <div class="card-body">
+                <h5 class="card-title">Buku Sains dan Teknologi</h5>
+                <p class="card-text">Informasi dan pengetahuan tentang perkembangan sains dan teknologi terkini.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/buku3.jpg" class="card-img-top" alt="Buku 3" />
+              <div class="card-body">
+                <h5 class="card-title">Novel Fiksi</h5>
+                <p class="card-text">Kumpulan novel fiksi yang menarik dan mendidik untuk siswa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Alamat: Jalan Perpustakaan No. 123, Kota Buku</p>
+      <p>Contact: email@perpustakaan.com | 08123456789</p>
+      <p>Sosial Media: @perpustakaan</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = "YOUR_WEB_APP_URL"; // Replace with your Google Apps Script Web App URL
+      const form = document.getElementById("registrationForm");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          const result = await response.json();
+          if (result.status === "success") {
+            alert("Pendaftaran berhasil!");
+            form.reset();
+          }
+        } catch (error) {
+          alert("Terjadi kesalahan, silakan coba lagi.");
+        }
+      });
+    </script>
+  </body>
+</html>
