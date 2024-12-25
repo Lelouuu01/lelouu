@@ -180,13 +180,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-      const scriptURL = "YOUR_WEB_APP_URL"; // Replace with your Google Apps Script Web App URL
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwMzzphIdKNBnv9Fb5luqD66L-l7uV7keO6BCl_F-dL/dev";
       const form = document.getElementById("registrationForm");
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
+
+        console.log("Data yang dikirim:", data); // Log data yang dikirim
 
         try {
           const response = await fetch(scriptURL, {
@@ -198,11 +200,15 @@
           });
 
           const result = await response.json();
+          console.log("Hasil respons:", result); // Log respons dari server
           if (result.status === "success") {
             alert("Pendaftaran berhasil!");
             form.reset();
+          } else {
+            alert("Gagal mendaftar: " + result.message);
           }
         } catch (error) {
+          console.error("Error:", error);
           alert("Terjadi kesalahan, silakan coba lagi.");
         }
       });
